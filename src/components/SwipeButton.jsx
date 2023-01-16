@@ -1,5 +1,5 @@
 import React from 'react';
-import {StyleSheet, View} from 'react-native';
+import {Dimensions, StyleSheet, View} from 'react-native';
 import {PanGestureHandler} from 'react-native-gesture-handler';
 import LinearGradient from 'react-native-linear-gradient';
 import Animated, {
@@ -14,7 +14,8 @@ import Animated, {
 } from 'react-native-reanimated';
 import {useState} from 'react';
 
-const BUTTON_WIDTH = 350;
+const { width: SCREEN_WIDTH } = Dimensions.get('window');
+const BUTTON_WIDTH = SCREEN_WIDTH - 48;
 const BUTTON_HEIGHT = 100;
 const BUTTON_PADDING = 10;
 const SWIPEABLE_DIMENSIONS = BUTTON_HEIGHT - 2 * BUTTON_PADDING;
@@ -36,11 +37,11 @@ const SwipeButton = ({ onToggle }) => {
   };
   const animatedGestureHandler = useAnimatedGestureHandler({
     onStart: (_, ctx) => {
-        ctx.complete = toggled;
+        ctx.completed = toggled;
       },
     onActive: (e, ctx) => {
         let newValue;
-        if (ctx.complete) {
+        if (ctx.completed) {
           newValue = H_SWIPE_RANGE + e.translationX;
         } else {
           newValue = e.translationX;

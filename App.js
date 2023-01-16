@@ -25,7 +25,7 @@ const styles = StyleSheet.create({
     flexDirection: 'column',
     justifyContent: 'center',
     alignItems: 'center',
-    backgroundColor: '#3f3f4e',
+    backgroundColor: '#f5f5f5',
   },
 });
 
