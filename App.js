@@ -10,11 +10,15 @@ import React from 'react';
 import {SafeAreaView, StyleSheet} from 'react-native';
 
 import SwipeButton from './src/components/SwipeButton';
+import AnimatedAccordion from './src/components/AnimatedAccordion';
+import AnimatedSwitchButton from './src/components/AnimatedSwitchButton';
 
 const App = () => {
   return (
     <SafeAreaView style={styles.container}>
-      <SwipeButton onToggle={() => {}}/>
+      {/* <SwipeButton onToggle={() => {}}/>
+      <AnimatedAccordion /> */}
+      <AnimatedSwitchButton />
     </SafeAreaView>
   );
 };
@@ -25,7 +29,7 @@ const styles = StyleSheet.create({
     flexDirection: 'column',
     justifyContent: 'center',
     alignItems: 'center',
-    backgroundColor: '#f5f5f5',
+    backgroundColor:'#B1B1B1',
   },
 });
 
