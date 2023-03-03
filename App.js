@@ -13,25 +13,27 @@ import SwipeButton from './src/components/SwipeButton';
 import AnimatedAccordion from './src/components/AnimatedAccordion';
 import AnimatedSwitchButton from './src/components/AnimatedSwitchButton';
 import SwitchListItems from './src/toggleSwitchList/toggleSwitchList';
+import FlaotingTextInput from './src/components/FloatingTextInput'
 
 const App = () => {
   return (
     <SafeAreaView style={styles.container}>
-      {/* <SwipeButton onToggle={() => {}}/>
-      <AnimatedAccordion /> */}
+      {/* <SwipeButton onToggle={() => {}}/> */}
+      {/* <AnimatedAccordion /> */}
       {/* <AnimatedSwitchButton /> */}
-      <SwitchListItems/>
+      {/* <SwitchListItems/> */}
+      <FlaotingTextInput />
     </SafeAreaView>
   );
 };
 
 const styles = StyleSheet.create({
   container: {
-    height: '100%',
+    // height: '100%',
     // flexDirection: 'column',
     // justifyContent: 'center',
     // alignItems: 'center',
-    backgroundColor:'#95C8D8',
+    // backgroundColor:'#95C8D8',
   },
 });
 
